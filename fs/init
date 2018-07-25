@@ -1,0 +1,9 @@
+#!/bin/sh
+
+busybox mount -t devtmpfs dev /dev
+busybox mount -t sysfs sys /sys
+busybox mount -t proc proc /proc
+busybox mkdir -p /usr/bin
+busybox --install -s
+
+/bin/sh -l

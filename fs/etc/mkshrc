@@ -1,0 +1,4 @@
+HISTFILE=$HOME/.history
+HISTSIZE=4096
+
+bind ^L=clear-screen
