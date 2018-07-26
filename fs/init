@@ -1,9 +1,20 @@
 #!/bin/sh
 
+busybox mkdir -p /dev
 busybox mount -t devtmpfs dev /dev
+
+busybox mkdir -p /sys
 busybox mount -t sysfs sys /sys
+
+busybox mkdir -p /proc
 busybox mount -t proc proc /proc
+
+busybox mkdir -p /tmp
+busybox mount -t tmpfs tmpfs /tmp
+
+busybox mkdir -p /usr/sbin
 busybox mkdir -p /usr/bin
+busybox mkdir -p /sbin
 busybox --install -s
 
-/bin/sh -l
+exec busybox init
