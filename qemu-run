@@ -1,0 +1,5 @@
+#!/bin/sh
+
+KERNEL=`ls -1 /boot/vmlinuz-* | tail -1`
+
+qemu-system-x86_64 -kernel $KERNEL -initrd initramfz -append quiet

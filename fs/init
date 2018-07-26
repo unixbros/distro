@@ -17,4 +17,6 @@ busybox mkdir -p /usr/bin
 busybox mkdir -p /sbin
 busybox --install -s
 
+busybox rm -f /init
+
 exec busybox init
